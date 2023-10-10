@@ -24,6 +24,7 @@ class ServerSide:
             elif data == "ch":
                 # FIXME: send the signal to 2nd desktop
                 print("Message from client:", data, "\n Changed the background on 2nd desktop")
+                data = ""
         
 server = ServerSide()
 server.ActivateServer()

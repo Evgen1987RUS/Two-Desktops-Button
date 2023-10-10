@@ -1,5 +1,9 @@
+import sys
+sys.path.append("..")
 from tkinter import *
+from tkinter import ttk
 import random
+from Sockets import SocketServer
 
 def change_color():
     r = random.randint(0, 255)
@@ -9,10 +13,8 @@ def change_color():
     color = '#%02x%02x%02x' % (r, g, b)
     
     root.config(bg=color)
-    
-root = Tk()
 
-button = Button(root, text="Change picture", command=change_color)
-button.pack()
+root = Tk()
+frame = ttk.Frame(root, padding=100).grid()
 
 root.mainloop()
