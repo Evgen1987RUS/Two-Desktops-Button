@@ -16,6 +16,5 @@ frame = ttk.Frame(root, padding=100)
 frame.grid()
 
 button = ttk.Button(frame, text="Change picture", command=change_color)
-button.grid()
-
+button.grid(column=1, row=1)
 root.mainloop()
