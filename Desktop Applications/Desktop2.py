@@ -50,8 +50,8 @@ style = ttk.Style(root)
 frame = ttk.Frame(root, width=1920, height=1080)
 frame.grid()
 
-bgChangeBtn = ttk.Button(frame, text="Change color", command=changeColor)
-bgChangeBtn.place(relx=0.5, rely=0.4, anchor=CENTER)
+# bgChangeBtn = ttk.Button(frame, text="Change color", command=changeColor)
+# bgChangeBtn.place(relx=0.5, rely=0.4, anchor=CENTER)
 
 hostBtn = ttk.Button(frame, text="Host server", command=newHostServerThread) # connects to host #lambda required to not get a return from func (https://docs.python.org/2/tutorial/controlflow.html#lambda-expressions)
 hostBtn.place(relx=0.5, rely=0.5, anchor=CENTER)
