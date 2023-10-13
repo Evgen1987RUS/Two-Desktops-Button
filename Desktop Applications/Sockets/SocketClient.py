@@ -13,9 +13,9 @@ class ClientSide:
         if msg == "ch": # "ch" is for change
             S.send(msg.encode())
             print("Sent the following message to ", HOST, ": ", msg, sep="")
-        else: # msg == "e", "e" is for exit
+        elif msg == "e": # msg == "e", "e" is for exit
             S.send(msg.encode())
             S.close()     # sends the message to close the desktop and turns this desktop off
-            print("Sent the following message to ", HOST, ": ", msg, sep="" "\n Process terminated")
+            print("Sent the following message to ", HOST, ": ", msg, ". Process terminated.", sep="")
 
 client = ClientSide()

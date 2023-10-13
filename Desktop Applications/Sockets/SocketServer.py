@@ -17,13 +17,14 @@ class ServerSide:
         while 1:
             data = server.con.recv(1024).decode() # recieves signal # FIXME: check whether less than 1024 can be supported
             if data == "e": # if an exit is signaled -> closes connection and server socket
+                # FIXME: make it close both apps
                 server.con.close() 
                 S.close()
-                print("Message from client:", data, "\n Connection and server were terminated")
+                print("Message from client:", data, "Connection and server were terminated.")
                 break
             elif data == "ch":
                 # FIXME: send the signal to 2nd desktop
-                print("Message from client:", data, "\n Changed the background on 2nd desktop")
+                print("Message from client:", data, "Changed the background on 2nd desktop.")
                 data = ""
         
 server = ServerSide()

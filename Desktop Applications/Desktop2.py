@@ -1,5 +1,3 @@
-import sys
-sys.path.append("..")
 from tkinter import *
 from tkinter import ttk
 import random
@@ -14,7 +12,7 @@ def change_color():
     
     root.config(bg=color)
 
-root = Tk()
+root = Tk() # should run the function above after connecting with the client 
 frame = ttk.Frame(root, padding=100).grid()
 
 root.mainloop()
